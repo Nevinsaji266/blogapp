@@ -6,42 +6,106 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
-    <div className="bg-[#060606] w-full">
-      <div className="flex flex-wrap justify-between items-center p-5 bg-[#1A2B3C] shadow-md w-full">
-        {/* Column 1: Blog Info */}
-        <div className="border border-gray-300 p-5 text-center text-gray-300 flex flex-col items-center justify-center bg-[#1A2B3C] shadow-md flex-1 max-w-full sm:max-w-[33.33%]">
-          <div className='flex items-center justify-center'>
-            <FontAwesomeIcon icon={faBlog} className="mr-2" /> 
-            <h5 className="text-xl font-bold">Blog Space</h5>
+    <>
+      <div style={{ backgroundColor: "#060606", width: "100%" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between", // Ensures no extra space between divs
+            alignItems: "center",
+            padding: "20px",
+            flexWrap: "wrap",
+            borderRadius: "0px",
+            boxShadow: "0px 8px 16px rgba(0, 0, 0, 0.6)",
+            backgroundColor: "#1A2B3C",
+            width: "100%"
+          }}
+        >
+          {/* Column 1: Blog Info */}
+          <div
+            style={{
+              border: "2px solid #E0E0E0",
+              borderRadius: "0px", // Removed border-radius for a flush look
+              padding: "20px",
+              margin: "0", // Removed margin
+              color: "#E0E0E0",
+              textAlign: "center",
+              minHeight: "150px",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              backgroundColor: "#1A2B3C",
+              boxShadow: "0px 6px 12px rgba(0, 0, 0, 0.4)",
+              flex: "1",
+              maxWidth: "33.33%" // Each column takes equal width
+            }}
+          >
+            <div className='d-flex justify-content-center align-items-center'>
+            <FontAwesomeIcon icon={faBlog} /> 
+              <h5 style={{ fontSize: "24px", fontWeight: "bold" }}> Blog Space</h5>
+            </div>
+            <p style={{ fontSize: "14px", marginTop: "10px" }}>Discover articles, tutorials, and updates in the world of blogging.</p>
           </div>
-          <p className="text-sm mt-2">Discover articles, tutorials, and updates in the world of blogging.</p>
-        </div>
 
-        {/* Column 2: Links */}
-        <div className="border border-gray-300 p-5 text-center text-gray-300 flex flex-col items-center justify-center bg-[#1A2B3C] shadow-md flex-1 max-w-full sm:max-w-[33.33%]">
-          <h5 className="text-lg mb-2">Links</h5>
-          <Link to={'/'} className='text-gray-300 text-sm hover:underline'>Home</Link>
-          <Link to={'/blogs'} className='text-gray-300 text-sm hover:underline'>Blogs</Link>
-          <Link to={'/about'} className='text-gray-300 text-sm hover:underline'>About Us</Link>
-        </div>
-
-        {/* Column 3: Contact & Socials */}
-        <div className="border border-gray-300 p-5 text-center text-gray-300 flex flex-col items-center justify-center bg-[#1A2B3C] shadow-md flex-1 max-w-full sm:max-w-[33.33%]">
-          <h5 className="text-lg mb-2">Contact Us</h5>
-          <div className='flex flex-col sm:flex-row justify-center items-center w-full'>
-            <input type="text" className='form-control p-2 rounded-md text-black w-full sm:w-auto mb-2 sm:mb-0' placeholder='Email address' />
-            <button className='bg-green-600 text-white p-2 rounded-md sm:ml-2 w-full sm:w-auto'>Subscribe</button>
+          {/* Column 2: Links */}
+          <div
+            style={{
+              border: "2px solid #E0E0E0",
+              borderRadius: "0px",
+              padding: "20px",
+              margin: "0",
+              color: "#E0E0E0",
+              textAlign: "center",
+              minHeight: "150px",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              backgroundColor: "#1A2B3C",
+              boxShadow: "0px 6px 12px rgba(0, 0, 0, 0.4)",
+              flex: "1",
+              maxWidth: "33.33%"
+            }}
+          >
+            <h5 style={{ fontSize: "22px", marginBottom: "10px" }}>Links</h5>
+            <Link to={'/'} className='text-decoration-none' style={{ color: "#E0E0E0" }}><p style={{ fontSize: "16px" }}>Home</p></Link>
+            <Link to={'/blogs'} className='text-decoration-none' style={{ color: "#E0E0E0" }}><p style={{ fontSize: "16px" }}>Blogs</p></Link>
+            <Link to={'/about'} className='text-decoration-none' style={{ color: "#E0E0E0" }}><p style={{ fontSize: "16px" }}>About Us</p></Link>
           </div>
-          <div className='flex justify-around w-full mt-3'>
-            <FontAwesomeIcon icon={faXTwitter} className='text-light cursor-pointer hover:text-gray-400' />
-            <FontAwesomeIcon icon={faLinkedin} className='text-light cursor-pointer hover:text-gray-400' />
-            <FontAwesomeIcon icon={faFacebook} className='text-light cursor-pointer hover:text-gray-400' />
-            <FontAwesomeIcon icon={faGithub} className='text-light cursor-pointer hover:text-gray-400' />
-            <FontAwesomeIcon icon={faInstagram} className='text-light cursor-pointer hover:text-gray-400' />
+
+          {/* Column 3: Contact & Socials */}
+          <div
+            style={{
+              border: "2px solid #E0E0E0",
+              borderRadius: "0px",
+              padding: "20px",
+              margin: "0",
+              color: "#E0E0E0",
+              textAlign: "center",
+              minHeight: "150px",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              backgroundColor: "#1A2B3C",
+              boxShadow: "0px 6px 12px rgba(0, 0, 0, 0.4)",
+              flex: "1",
+              maxWidth: "33.33%"
+            }}
+          >
+            <h5 style={{ fontSize: "22px", marginBottom: "10px" }}>Contact Us</h5>
+            <div className='d-flex justify-content-center'>
+           
+            </div>
+            <div className='d-flex justify-content-around mt-3'>
+              <FontAwesomeIcon icon={faXTwitter} className='text-light' />
+              <FontAwesomeIcon icon={faLinkedin} className='text-light' />
+              <FontAwesomeIcon icon={faFacebook} className='text-light' />
+              <FontAwesomeIcon icon={faGithub} className='text-light' />
+              <FontAwesomeIcon icon={faInstagram} className='text-light' />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
